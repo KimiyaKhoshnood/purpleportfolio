@@ -7,7 +7,7 @@ import TsLogo from "../../../public/TsLogo.svg"
 import GitLogo from "../../../public/GitLogo.svg"
 
 const Skills = () => {
-    let SkillsEachProps: SkillsEachProps[] = [
+    const SkillsEachProps: SkillsEachProps[] = [
         {img: NextLogo, skillPercentage: "88%", skillName: "Next.js"},
         {img: ReduxLogo, skillPercentage: "92%", skillName: "Redux"},
         {img: TsLogo, skillPercentage: "92%", skillName: "TypeScript"},

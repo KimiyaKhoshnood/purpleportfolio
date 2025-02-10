@@ -1,25 +1,25 @@
-import Header from '@/Components/Header/Header'
 import HeroProject from '@/Components/HeroProject/HeroProject'
 import ProjectDetails from '@/Components/ProjectDetails/ProjectDetails'
-import { ExtendedRecentWorksProps, RecentWorksEachProp } from '@/Components/RecentWorks/RecentWorksInfo'
+import { RecentWorksEachProp } from '@/Components/RecentWorks/RecentWorksInfo'
 import React from 'react'
 
 interface EachProduct {
-  params: {id: string}
-  searchParams: {}
+  params: Promise<{id: string}>,
+  searchParams: Promise<Record<string, string | undefined>>
 }
 
-const page = async({params}:EachProduct) => {
+const page = async ({params}:EachProduct) => {
     const { id } = await params
-    // console.log("params: ", params);
+    const ProjectData = RecentWorksEachProp[Number(id)-1]    
 
-    const ProjectData = await RecentWorksEachProp[Number(id)-1]
-    // console.log("id: ", id,"data: ", ProjectData, );
+    if (!ProjectData) {
+      return <div>Project Not Found</div>;
+    }
     
   return (
     <div className=''>
       <HeroProject/>
-      <ProjectDetails img={ProjectData.img} title={ProjectData.title} about={ProjectData.about} StartDate={ProjectData.StartDate} client={ProjectData.client} descripstion={ProjectData.descripstion}/>
+      <ProjectDetails img={ProjectData.img} title={ProjectData.title} about={ProjectData.about} StartDate={ProjectData.StartDate} client={ProjectData.client} description={ProjectData.description}/>
     </div>
   )
 }

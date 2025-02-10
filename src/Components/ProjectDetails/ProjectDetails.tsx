@@ -1,9 +1,7 @@
 import React from 'react'
-import { ExtendedRecentWorksProps } from '../RecentWorks/RecentWorksInfo'
-import Image from 'next/image'
-import ProjectImage from "../../../public/projectExample.jpg"
+import Image, { StaticImageData } from 'next/image'
 
-const ProjectDetails = ({img, title, about, StartDate, client, descripstion}:ExtendedRecentWorksProps) => {
+const ProjectDetails = ({img, title, about, StartDate, client, description}:{img:StaticImageData, title:string, about:string, StartDate:string, client: string, description:string}) => {
     
   return (
     <div className='md:p-10 p-5 flex flex-col gap-5'>
@@ -28,7 +26,7 @@ const ProjectDetails = ({img, title, about, StartDate, client, descripstion}:Ext
 
         <div>
             <h2 className='font-bold text-3xl leading-relaxed'>Project Description:</h2>
-            <p className='leading-relaxed text-justify'>{descripstion}</p>
+            <p className='leading-relaxed text-justify'>{description}</p>
             <button className="px-9 py-3 rounded-3xl text-white font-medium bg-gradient-to-r from-[#8650F6] to-[#2A1455] my-4" type="submit">live preview</button>
         </div>
 

@@ -1,19 +1,15 @@
-// import Icon from "react-icons-kit"
 import ExperienceAndEducationEach, { ExperienceAndEducationEachProp } from "./ExperienceAndEducationEach"
-// import {u1F393} from 'react-icons-kit/noto_emoji_regular/u1F393'
-// import {u1F3C6} from 'react-icons-kit/noto_emoji_regular/u1F3C6'
 import { PiStudentBold } from "react-icons/pi";
-import { PiMedalLight } from "react-icons/pi";
 import { PiMedal } from "react-icons/pi";
 
 
 const ExperienceAndEducation = () => {
-    let ExperienceProps: ExperienceAndEducationEachProp[] = [
+    const ExperienceProps: ExperienceAndEducationEachProp[] = [
         {date:"2022-Present", title:"LEAD DEVELOPER", span:"Blockdots, London"},
         {date:"2021-2022", title:"FULL STACK WEB", span:"Persons, The New School"},
         {date:"2020-2021", title:"UI DESIGNER", span:"House of Life Leeds"},
     ]
-    let EducationProps: ExperienceAndEducationEachProp[] = [
+    const EducationProps: ExperienceAndEducationEachProp[] = [
         {date:"2020-2023", title:"PROGRAMMING COURSE", span:"Harverd University"},
         {date:"2016-2020", title:"GRAPHIC DESIGN COURSE", span:"University of Tehran"},
         {date:"2012-2015", title:"WEB DESIGN COURSE", span:"University of Califonia"},

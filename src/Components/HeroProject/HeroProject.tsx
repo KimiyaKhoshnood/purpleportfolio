@@ -1,6 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
-import imageHero from "../../../public/bgPortfolioHero.jpg"
 
 const HeroProject = () => {
   return (

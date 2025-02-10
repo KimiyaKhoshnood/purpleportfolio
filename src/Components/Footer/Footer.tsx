@@ -1,13 +1,14 @@
-// import {arrowUp} from 'react-icons-kit/feather/arrowUp'
-// import Icon from 'react-icons-kit'
+import Image from "next/image";
 import Link from "next/link";
 import { IoMdArrowRoundUp } from "react-icons/io";
+import LogoK from "../../../public/LogoK.png"
 
 const Footer = () => {
     return(
         <>
         <footer className="flex flex-col bg-[#2a1454] items-center py-10 gap-5">
-            <img className="w-[75px] h-[75px]" src="https://cdn-icons-png.flaticon.com/256/13309/13309357.png" alt="" />
+            {/* <img className="w-[75px] h-[75px]" src="https://cdn-icons-png.flaticon.com/256/13309/13309357.png" alt="" /> */}
+            <Image src={LogoK} alt="" width={75} height={75}></Image>
             <div className="flex gap-8 text-white font-bold">
                 <Link href={"/#servicesID"}>Services.</Link>
                 <Link href={"/#worksID"}>Works.</Link>

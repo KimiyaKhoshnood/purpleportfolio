@@ -70,7 +70,7 @@ const HeroSection = () => {
         </div>
         <div className="md:w-1/2 w-full h-full flex justify-center items-center py-5">
           <div className="bg-black rounded-3xl lg:w-[380px] lg:h-[450px] md:w-[320px] w-[300px] md:h-[400px] h-[380px] rotate-6 hover:rotate-0 hover:border-4 hover:border-[#8750F7] transition-all ease-linear duration-200 flex">
-            <Image src={purplePerson} width={380} className="p-10" alt=""/>
+            <Image src={purplePerson} width={380} className="p-10" alt="" priority={true}/>
           </div>
         </div>
         <p className="md:hidden block px-7 py-5 lg:text-2xl sm:text-xl text-lg font-normal text-[#140C1C]">

@@ -2,7 +2,8 @@
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
 import Link from "next/link";
-
+import Image from "next/image";
+import LogoK from "../../../public/LogoK.png"
 
 const Header = () => {
     const [HamMenu, setHamMenu] = useState(false)
@@ -11,7 +12,7 @@ const Header = () => {
         <>
         <div className=" z-10 flex justify-between h-fit w-full items-center pb-6 md:pt-6 pt-6 md:px-20 px-5 text-[18px] font-medium text-[#2a1454]">
             <div className="flex items-center">
-                <Link href={"/"}><img className="w-[50px] h-[45px]" src="https://cdn-icons-png.flaticon.com/256/13309/13309357.png" alt="" /></Link>
+                <Link href={"/"}><Image src={LogoK} alt="" width={50} height={45}></Image></Link>
                 <span className="md:block hidden text-[16px]">Kimiya.Khoshnood@gmail.com</span>
             </div>
             <div className="lg:flex hidden gap-8 items-center text-[17px]">

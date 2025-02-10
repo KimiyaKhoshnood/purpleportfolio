@@ -1,6 +1,6 @@
 import QualityServicesBox, { QualityServicesBoxProps } from "./QualityServicesBox"
 const QualityServices = () => {
-    let QualityServicesProps: QualityServicesBoxProps[] = [
+    const QualityServicesProps: QualityServicesBoxProps[] = [
         {num : "01", h3 : "Web Design", p : "Brolly show off show off pick your nose and blow off well A bit of how’s your father tomfoolery blimey, me old mucker starkers Queen’s..."},
         {num : "02", h3 : "UI/UX Design", p : "Brolly show off show off pick your nose and blow off well A bit of how’s your father tomfoolery blimey, me old mucker starkers Queen’s..."},
         {num : "03", h3 : "Branding Design", p : "Brolly show off show off pick your nose and blow off well A bit of how’s your father tomfoolery blimey, me old mucker starkers Queen’s..."},

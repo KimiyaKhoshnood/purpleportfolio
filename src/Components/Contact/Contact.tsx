@@ -1,10 +1,7 @@
 import ContactWays, { ContactWaysProps } from "./ContactWays"
-import { FaPhoneVolume } from "react-icons/fa6";
-import { MdMail } from "react-icons/md";
-import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
-    let ContactWaysProps: ContactWaysProps[] = [
+    const ContactWaysProps: ContactWaysProps[] = [
         {svg: "phone", title:"Phone", content:"+98 910 879 3797"},
         {svg: "mail", title:"Email", content:"Kimiya.khoshnod@gmail.com"},
         {svg: "map", title:"Address", content:"Ferdoos gharb, Tehran"},

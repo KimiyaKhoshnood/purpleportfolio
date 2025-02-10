@@ -1,6 +1,6 @@
 import StatusNumbers, { StatusNumbersProps } from "./StatusNumbers";
 const StatusNumbersBox = () => {
-    let StatusNumbersProps: StatusNumbersProps[] = [
+    const StatusNumbersProps: StatusNumbersProps[] = [
         {num:"14", lineFirst:"Months of", lineSecond:"Experience"},
         {num:"50+", lineFirst:"Project", lineSecond:"Completed"},
         {num:"1.5K", lineFirst:"Happy", lineSecond:"Clients"},
