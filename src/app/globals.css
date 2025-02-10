@@ -19,3 +19,28 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+#textGradiant {
+  background: -webkit-linear-gradient(left, #8650F6, #2A1455);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+@media (max-width: 800px) {
+  #textOutline{
+    display: none;
+  }  
+}
+
+
+#textOutline>div {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #8650F6;
+  animation: textOutline 1.5s alternate infinite ease-in-out;
+}
+
+#eachWork:hover>div{
+  opacity: 100%;
+}
