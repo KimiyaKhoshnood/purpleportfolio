@@ -31,7 +31,7 @@ const ProjectDetails = ({img, title, about, StartDate, client, description, prev
             {link && <Link href={link} className="px-9 py-3 block w-fit rounded-3xl text-white font-medium bg-gradient-to-r from-[#8650F6] to-[#2A1455] my-4" >View on GitHub</Link>}
         </div>
 
-        <div className='h-40 w-full bg-[#8750F7] flex justify-between text-white font-bold text-4xl items-center px-10'>
+        <div className='sm:h-40 h-24 w-full bg-[#8750F7] flex justify-between text-white font-bold md:text-4xl sm:text-3xl text-xl items-center sm:px-10 px-5'>
             <Link href={`/project/${nextId}`} className='flex flex-col'>
               <span className='text-lg'>Next</span>
               <span>{nextTitle}</span>
