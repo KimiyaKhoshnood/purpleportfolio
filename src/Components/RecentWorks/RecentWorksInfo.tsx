@@ -4,7 +4,6 @@ import example2 from "../../../public/ScreenshotFilimo.png"
 import example3 from "../../../public/ScreenshotIdeaControl3.png"
 import example4 from "../../../public/ScreenshotPortfolio2.png"
 
-type Tag = "Company" | "UiUx" | "Clone";
 export type ExtendedRecentWorksProps = RecentWorksEachProps & {
   tags: ("All"|"Company" | "UiUx" | "Clone")[];
   StartDate: string
