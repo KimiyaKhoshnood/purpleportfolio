@@ -1,7 +1,8 @@
 import React from 'react'
 import Image, { StaticImageData } from 'next/image'
+import Link from 'next/link'
 
-const ProjectDetails = ({img, title, about, StartDate, client, description}:{img:StaticImageData, title:string, about:string, StartDate:string, client: string, description:string}) => {
+const ProjectDetails = ({img, title, about, StartDate, client, description, prevTitle, nextTitle, prevId, nextId, link}:{img:StaticImageData, title:string, about:string, StartDate:string, client: string, description:string, prevTitle:string, nextTitle:string, prevId:number, nextId:number, link:string|undefined}) => {
     
   return (
     <div className='md:p-10 p-5 flex flex-col gap-5'>
@@ -27,12 +28,18 @@ const ProjectDetails = ({img, title, about, StartDate, client, description}:{img
         <div>
             <h2 className='font-bold text-3xl leading-relaxed'>Project Description:</h2>
             <p className='leading-relaxed text-justify'>{description}</p>
-            <button className="px-9 py-3 rounded-3xl text-white font-medium bg-gradient-to-r from-[#8650F6] to-[#2A1455] my-4" type="submit">live preview</button>
+            {link && <Link href={link} className="px-9 py-3 block w-fit rounded-3xl text-white font-medium bg-gradient-to-r from-[#8650F6] to-[#2A1455] my-4" >View on GitHub</Link>}
         </div>
 
-        <div className='h-40 w-full bg-[#8750F7] flex justify-between text-white font-bold text-4xl items-center p-10'>
-            <div>Next</div>
-            <div>Prev</div>
+        <div className='h-40 w-full bg-[#8750F7] flex justify-between text-white font-bold text-4xl items-center px-10'>
+            <Link href={`/project/${nextId}`} className='flex flex-col'>
+              <span className='text-lg'>Next</span>
+              <span>{nextTitle}</span>
+            </Link>
+            <Link href={`/project/${prevId}`} className='flex flex-col text-right'>
+              <span className='text-lg'>Prev</span>
+              <span>{prevTitle}</span>
+            </Link>
         </div>
     </div>
   )

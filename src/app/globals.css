@@ -7,17 +7,18 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 
@@ -39,6 +40,15 @@ body {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #8650F6;
   animation: textOutline 1.5s alternate infinite ease-in-out;
+}
+
+@keyframes textOutline {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.1;
+  }
 }
 
 #eachWork:hover>div{

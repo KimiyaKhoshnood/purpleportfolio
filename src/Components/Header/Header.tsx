@@ -29,7 +29,7 @@ const Header = () => {
             </div>
         </div>
         <div className="px-5">
-            <div className={`lg:hidden ${HamMenu?"flex":"hidden"} flex-col gap-1 text-[17px] bg-purple-100 shadow-lg py-5 rounded-xl`}>
+            <div className={`lg:hidden ${HamMenu?"flex":"hidden"} flex-col gap-1 text-[17px] bg-purple-100 shadow-lg py-5 rounded-xl w-full`}>
                 <Link className="hover:bg-purple-50 border-[#2A1455] px-5 py-2"  href="/#servicesID">Services</Link>
                 <Link className="hover:bg-purple-50 border-[#2A1455] px-5 py-2" href="/#worksID">Works</Link>
                 <Link className="hover:bg-purple-50 border-[#2A1455] px-5 py-2" href="/#skillsID">Skills</Link>

@@ -28,8 +28,9 @@ const HeroSection = () => {
             UX Designer
           </h1>
           <p className="md:block hidden lg:text-2xl sm:text-xl text-lg font-normal text-[#140C1C]">
-            I break down complex user experience problems to create integrity
-            focussed solutions that connect billions of people
+            {/* I break down complex user experience problems to create integrity */}
+            {/* focussed solutions that connect billions of people */}
+            Where Aesthetic Meets Functionality in Every Pixel.
           </p>
           <div className="md:flex hidden w-full h-fit flex-wrap items-center md:justify-start justify-center gap-3 text-[rgb(135,80,247)]">
             <span className="py-3 px-7 flex items-center gap-1 w-fit rounded-3xl font-medium border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all duration-200 ease-linear cursor-pointer">
@@ -74,8 +75,9 @@ const HeroSection = () => {
           </div>
         </div>
         <p className="md:hidden block px-7 py-5 lg:text-2xl sm:text-xl text-lg font-normal text-[#140C1C]">
-          I break down complex user experience problems to create integrity
-          focussed solutions that connect billions of people
+          {/* I break down complex user experience problems to create integrity */}
+          {/* focussed solutions that connect billions of people */}
+          Where Aesthetic Meets Functionality in Every Pixel.
         </p>
         <div className="md:hidden flex px-7 w-full h-fit flex-wrap items-center md:justify-start justify-center gap-3 text-[rgb(135,80,247)]">
           <span className="py-3 px-7 flex w-fit rounded-3xl font-medium border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all duration-200 ease-linear cursor-pointer">

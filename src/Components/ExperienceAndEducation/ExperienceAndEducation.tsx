@@ -5,15 +5,14 @@ import { PiMedal } from "react-icons/pi";
 
 const ExperienceAndEducation = () => {
     const ExperienceProps: ExperienceAndEducationEachProp[] = [
-        {date:"2022-Present", title:"LEAD DEVELOPER", span:"Blockdots, London"},
-        {date:"2021-2022", title:"FULL STACK WEB", span:"Persons, The New School"},
-        {date:"2020-2021", title:"UI DESIGNER", span:"House of Life Leeds"},
+        {date:"2024", title:"Quality Assurance", span:"Tehran, SD Studio"},
+        {date:"2024-2025", title:"Web Design", span:"Tehran, Idea Control Company"},
     ]
     const EducationProps: ExperienceAndEducationEachProp[] = [
-        {date:"2020-2023", title:"PROGRAMMING COURSE", span:"Harverd University"},
-        {date:"2016-2020", title:"GRAPHIC DESIGN COURSE", span:"University of Tehran"},
-        {date:"2012-2015", title:"WEB DESIGN COURSE", span:"University of Califonia"},
-        {date:"2010-2011", title:"DESIGN & TECHNOLOGY", span:"Persons, The New School"},
+        {date:"2022-2025", title:"STATISTICS", span:"Tehran University"},
+        {date:"2023-2024", title:"WEB DESIGN COURSE", span:"Tehran Institute of Technology"},
+        {date:"2024", title:"REACT", span:"Tehran Institute of Technology"},
+        {date:"2023-Present", title:"SELF-EDUCATION", span:"Youtube and Udemy"},
     ]
 
     return(
