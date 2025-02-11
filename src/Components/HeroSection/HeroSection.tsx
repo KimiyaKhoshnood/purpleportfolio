@@ -6,8 +6,10 @@ import { FaTelegramPlane } from "react-icons/fa";
 import Image from "next/image";
 import purplePerson from "../../../public/undraw_mobile-development_tjxm.svg"
 import Link from "next/link";
+import DownloadResumeBtn from "./DownloadResumeBtn";
 
 const HeroSection = () => {
+
   return (
     <div className="flex flex-col bg-gradient-to-tr from-white via-white to-[#E8DEFD]">
       <div
@@ -33,34 +35,31 @@ const HeroSection = () => {
             Where Aesthetic Meets Functionality in Every Pixel.
           </p>
           <div className="md:flex hidden w-full h-fit flex-wrap items-center md:justify-start justify-center gap-3 text-[rgb(135,80,247)]">
-            <span className="py-3 px-7 flex items-center gap-1 w-fit rounded-3xl font-medium border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all duration-200 ease-linear cursor-pointer">
-              {/* <Icon
-                className="w-[25px] flex"
-                icon={androidDownload}
-                size={"100%"}
-              /> */}
-              Download CV
-            </span>
+            <DownloadResumeBtn/>
             <div className="flex items-center gap-3">
               <Link
+                aria-label="Link to Github"
                 href="https://github.com/KimiyaKhoshnood"
                 className="w-[40px] h-[40px] flex items-center justify-center rounded-full border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all  duration-200 ease-linear"
               >
                 <FaGithub className="p-2" size={"100%"}/>
               </Link>
               <Link
+                aria-label="Link to Linkedin"
                 href="https://www.linkedin.com/in/kimiyaKhoshnood"
                 className="w-[40px] h-[40px] flex items-center justify-center rounded-full border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all  duration-200 ease-linear"
               >
                 <FaLinkedinIn className="px-[10px]" size={"100%"}/>
               </Link>
               <Link
+                aria-label="Link to mail"
                 href="mailto:kimiya.khoshnod@gmail.com"
                 className="w-[40px] h-[40px] flex items-center justify-center rounded-full border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all  duration-200 ease-linear"
               >
                 <TbMailFilled className="px-[10px]" size={"100%"}/>
               </Link>
               <Link
+                aria-label="Link to Telegram"
                 href="https://t.me/KimiS_n"
                 className="w-[40px] h-[40px] flex items-center justify-center rounded-full border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all  duration-200 ease-linear"
               >
@@ -80,9 +79,7 @@ const HeroSection = () => {
           Where Aesthetic Meets Functionality in Every Pixel.
         </p>
         <div className="md:hidden flex px-7 w-full h-fit flex-wrap items-center md:justify-start justify-center gap-3 text-[rgb(135,80,247)]">
-          <span className="py-3 px-7 flex w-fit rounded-3xl font-medium border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all duration-200 ease-linear cursor-pointer">
-            Download CV
-          </span>
+          <DownloadResumeBtn/>
           <div className="flex items-center gap-3">
             <a
               href=""

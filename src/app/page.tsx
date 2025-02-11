@@ -1,5 +1,6 @@
 import Contact from "@/Components/Contact/Contact";
 import ExperienceAndEducation from "@/Components/ExperienceAndEducation/ExperienceAndEducation";
+import Footer from "@/Components/Footer/Footer";
 import HeroSection from "@/Components/HeroSection/HeroSection";
 import QualityServices from "@/Components/QualityServicesBox/QualityServices";
 import RecentWorks from "@/Components/RecentWorks/RecentWorks";
@@ -12,12 +13,12 @@ export default function Home() {
     <div className="">
       <HeroSection />
       <StatusNumbersBox/>
-      <QualityServices/>
-      <RecentWorks/>
       <ExperienceAndEducation/>
+      <RecentWorks/>
+      <QualityServices/>
       <Skills/>
       <Contact/>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }

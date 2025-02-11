@@ -12,7 +12,7 @@ const Header = () => {
         <>
         <div className=" z-10 flex justify-between h-fit w-full items-center pb-6 md:pt-6 pt-6 md:px-20 px-5 text-[18px] font-medium text-[#2a1454]">
             <div className="flex items-center">
-                <Link href={"/"}><Image src={LogoK} alt="" width={50} height={45}></Image></Link>
+                <Link aria-label="Link to Home" href={"/"}><Image src={LogoK} alt="" width={50} height={45}></Image></Link>
                 <span className="md:block hidden text-[16px]">Kimiya.Khoshnood@gmail.com</span>
             </div>
             <div className="lg:flex hidden gap-8 items-center text-[17px]">

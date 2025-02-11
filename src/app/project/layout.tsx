@@ -1,3 +1,4 @@
+import Footer from '@/Components/Footer/Footer';
 import Header from '@/Components/Header/Header';
 import React from 'react'
 
@@ -10,6 +11,7 @@ export default function layout({
       <div>
           <div className='bg-[#F6F3FC] lg:sticky lg:top-0'><Header/></div>
           {children}
+          <Footer/>
       </div>
     );
   }
