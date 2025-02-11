@@ -81,30 +81,30 @@ const HeroSection = () => {
         <div className="md:hidden flex px-7 w-full h-fit flex-wrap items-center md:justify-start justify-center gap-3 text-[rgb(135,80,247)]">
           <DownloadResumeBtn/>
           <div className="flex items-center gap-3">
-            <a
-              href=""
+            <Link
+              href="https://github.com/KimiyaKhoshnood"
               className="w-[40px] h-[40px] flex items-center justify-center rounded-full border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all  duration-200 ease-linear"
             >
               <FaGithub className="p-2" size={"100%"}/>
-            </a>
-            <a
-              href=""
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/kimiyaKhoshnood"
               className="w-[40px] h-[40px] flex items-center justify-center rounded-full border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all  duration-200 ease-linear"
             >
               <FaLinkedinIn className="px-[10px]" size={"100%"}/>
-            </a>
-            <a
-              href=""
+            </Link>
+            <Link
+              href="mailto:kimiya.khoshnod@gmail.com"
               className="w-[40px] h-[40px] flex items-center justify-center rounded-full border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all  duration-200 ease-linear"
             >
               <TbMailFilled className="px-[10px]" size={"100%"}/>
-            </a>
-            <a
-              href=""
+            </Link>
+            <Link
+              href="https://t.me/KimiS_n"
               className="w-[40px] h-[40px] flex items-center justify-center rounded-full border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all  duration-200 ease-linear"
             >
               <FaTelegramPlane className="px-[10px]" size={"100%"}/>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
