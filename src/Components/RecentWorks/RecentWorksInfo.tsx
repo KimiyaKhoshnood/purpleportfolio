@@ -3,6 +3,7 @@ import example1 from "../../../public/ScreenshotDigikala2.png"
 import example2 from "../../../public/ScreenshotFilimo.png"
 import example3 from "../../../public/ScreenshotIdeaControl3.png"
 import example4 from "../../../public/ScreenshotPortfolio2.png"
+import example5 from "../../../public/ScreenshotDashboard.png"
 
 export type ExtendedRecentWorksProps = RecentWorksEachProps & {
   tags: ("All"|"Company" | "UiUx" | "Clone")[];
@@ -60,5 +61,16 @@ export const RecentWorksEachProp: ExtendedRecentWorksProps[] = [
     client: "-",
     link: "https://github.com/KimiyaKhoshnood/KimiaKhoshnoodBootstrap",
     id: 4,
+  },
+  {
+    img: example5,
+    title: "Congestion Control",
+    about:
+      "This project is my first real-world collaboration with a backend team, where I integrated a Next.js frontend with a Django REST Framework (DRF) backend. It features authentication with JWT, a login system, password change functionality, and a dashboard for monitoring crowd congestion and camera availability. The UI is built with Ant Design and Tailwind CSS, while forms are handled using React Hook Form. Users can also add new cameras through the interface.",
+    description: "In this project, I worked on integrating a Next.js frontend with a Django REST Framework (DRF) backend, marking my first hands-on experience with real API interactions. Authentication is managed using JWT, allowing secure login and password change functionality. The application provides a dashboard where users can check live crowd congestion data and view the number of available cameras. Additionally, users can add new cameras via a form powered by React Hook Form. The UI is styled with Ant Design components and Tailwind CSS for a polished and responsive design. API requests are managed using Axios, and state management is handled efficiently within the React ecosystem.",
+      tags: ["UiUx"],
+    StartDate: "February 7, 2024",
+    client: "A Student",
+    id: 5,
   },
 ];

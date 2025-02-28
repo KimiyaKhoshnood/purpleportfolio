@@ -1,4 +1,3 @@
-import Header from "../Header/Header";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { TbMailFilled } from "react-icons/tb";
@@ -18,7 +17,7 @@ const HeroSection = () => {
       >
         <div>HI</div>
       </div>
-      <Header />
+      {/* <Header /> */}
       <div className="flex flex-1 md:flex-row flex-col items-center z-10 md:py-14">
         <div className="md:w-1/2 w-full h-full flex flex-col justify-center gap-5 md:pl-20 md:pr-0 px-7">
           <span className="lg:text-4xl text-3xl font-bold">I am Kimia</span>

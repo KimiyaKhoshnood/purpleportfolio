@@ -10,14 +10,14 @@ import TailwindLogo from "../../../public/TailwindLogo.svg"
 
 const Skills = () => {
     const SkillsEachProps: SkillsEachProps[] = [
-        {img: NextLogo, skillPercentage: "88%", skillName: "Next.js"},
-        {img: ReduxLogo, skillPercentage: "92%", skillName: "Redux"},
-        {img: TsLogo, skillPercentage: "92%", skillName: "TypeScript"},
-        {img: JsLogo, skillPercentage: "92%", skillName: "JavaScript"},
-        {img: ReactLogo, skillPercentage: "92%", skillName: "React"},
-        {img: GitLogo, skillPercentage: "92%", skillName: "Git"},
-        {img: BootstrapLogo, skillPercentage: "92%", skillName: "Bootstrap"},
-        {img: TailwindLogo, skillPercentage: "92%", skillName: "Tailwind"},
+        {img: NextLogo, skillName: "Next.js"},
+        {img: ReduxLogo, skillName: "Redux"},
+        {img: TsLogo, skillName: "TypeScript"},
+        {img: JsLogo, skillName: "JavaScript"},
+        {img: ReactLogo, skillName: "React"},
+        {img: GitLogo, skillName: "Git"},
+        {img: BootstrapLogo, skillName: "Bootstrap"},
+        {img: TailwindLogo, skillName: "Tailwind"},
     ]
     return(
         <>
@@ -27,7 +27,7 @@ const Skills = () => {
             <div className="flex gap-4 flex-wrap justify-center">
                 {
                     SkillsEachProps.map((elem, index)=>{
-                        return(<SkillsEach img={elem.img} skillPercentage={elem.skillPercentage} skillName={elem.skillName} key={index}/>)
+                        return(<SkillsEach img={elem.img} skillName={elem.skillName} key={index}/>)
                     })
                 }
             </div>

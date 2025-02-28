@@ -20,7 +20,7 @@ const ContactWays = ({svg, title, content}:ContactWaysProps) => {
             </div>
             <div className="lg:w-[300px] w-[250px]">
                 <h5 className="text-lg">{title}</h5>
-                <a className="font-medium lg:text-xl text-lg text-[#2A1454]" href="">{content}</a>
+                <span className="font-medium lg:text-xl text-lg text-[#2A1454]">{content}</span>
             </div>
         </div>
         </>
