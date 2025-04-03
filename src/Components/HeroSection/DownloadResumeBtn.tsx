@@ -9,7 +9,7 @@ const DownloadResumeBtn = () => {
       };
     
   return (
-    <button onClick={handleDownload} className="py-3 px-7 flex w-fit rounded-3xl font-medium border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all duration-200 ease-linear cursor-pointer">
+    <button disabled className="py-3 px-7 flex w-fit rounded-3xl font-medium border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all duration-200 ease-linear cursor-pointer">
         Download CV
     </button>
   )
