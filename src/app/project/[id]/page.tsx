@@ -1,6 +1,6 @@
-import HeroProject from '@/Components/HeroProject/HeroProject'
-import ProjectDetails from '@/Components/ProjectDetails/ProjectDetails'
-import { RecentWorksEachProp } from '@/Components/RecentWorks/RecentWorksInfo'
+import HeroProject from '@/Sections/Project/HeroProject/HeroProject'
+import ProjectDetails from '@/Sections/Project/ProjectDetails/ProjectDetails'
+import { RecentWorksEachProp } from '@/Sections/Home/RecentWorks/RecentWorksInfo'
 import React from 'react'
 
 interface EachProduct {
