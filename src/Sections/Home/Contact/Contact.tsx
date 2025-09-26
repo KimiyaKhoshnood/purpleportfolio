@@ -6,7 +6,7 @@ const Contact = () => {
     const ContactWaysProps: ContactWaysProps[] = [
         {svg: "phone", title:"Phone", content:"+98 910 879 3797"},
         {svg: "mail", title:"Email", content:"Kimiya.khoshnod@gmail.com"},
-        {svg: "map", title:"Address", content:"Ferdoos gharb, Tehran"},
+        {svg: "map", title:"Address", content:"District 5, Tehran, Iran"},
     ]
 
     return(
