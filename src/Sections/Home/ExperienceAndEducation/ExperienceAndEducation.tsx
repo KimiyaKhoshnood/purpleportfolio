@@ -6,13 +6,13 @@ import { PiMedal } from "react-icons/pi";
 
 const ExperienceAndEducation = () => {
     const ExperienceProps: ExperienceAndEducationEachProp[] = [
-        { date: "Jun 10 - Aug 10 2024", title: "Manual QA Intern", span: "SD Studio, Tehran" },
-        { date: "Apr 2025 - Present", title: "Front-end Developer", span: "Hazareh Sevom (HZ3), Tehran" },
-        { date: "Mar 2026 - Present", title: "Software Engineer", span: "Orchid Pharmed, Tehran" },
+        { date: "Jun 2024 - Aug 2024", title: "Manual QA Intern", span: "SD Studio, Tehran" },
+        { date: "Mar 2025 - Dec 2025", title: "Front-end Developer", span: "Hazareh Sevom (HZ3), Tehran" },
+        { date: "Dec 2025 - Present", title: "Software Engineer", span: "Orchid Pharmed, Tehran" },
     ];
     const EducationProps: ExperienceAndEducationEachProp[] = [
-        { date: "2022 - 2025", title: "STATISTICS", span: "University of Tehran" },
-        { date: "2025 - Present", title: "SOFTWARE ENGINEERING", span: "Islamic Azad University" },
+        { date: "2022 - 2025", title: "Statistics", span: "University of Tehran" },
+        { date: "2025 - Present", title: "Software Engineering", span: "Islamic Azad University" },
     ];
 
 
