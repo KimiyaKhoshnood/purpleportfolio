@@ -1,46 +1,68 @@
 "use client"
 import { FaBars } from "react-icons/fa";
-import { useState } from "react";
+import { IoClose } from "react-icons/io5";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import LogoK from "../../../../public/LogoK.png"
 
 // ----------------------------------------------------------------------
 
+const navLinks = [
+    { href: "/#servicesID", label: "Services" },
+    // { href: "/#worksID", label: "Works" },
+    { href: "/#skillsID", label: "Skills" },
+]
+
+// ----------------------------------------------------------------------
+
 const Header = () => {
     const [HamMenu, setHamMenu] = useState(false)
-    // #E8DEFD
-    return(
-        <div className="bg-gradient-to-r from-white to-[#E8DEFD] sticky top-0 z-50 w-full">
-        <div className=" z-10 flex justify-between h-fit w-full items-center pb-6 md:pt-6 pt-6 md:px-20 px-5 text-[18px] font-medium text-[#2a1454]">
-            <div className="flex items-center">
-                <Link aria-label="Link to Home" href={"/"}><Image src={LogoK} alt="" width={50} height={45}></Image></Link>
-                <span className="md:block hidden text-[16px]">Kimiya.Khoshnood@gmail.com</span>
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 10)
+        onScroll()
+        window.addEventListener("scroll", onScroll, { passive: true })
+        return () => window.removeEventListener("scroll", onScroll)
+    }, [])
+
+    return (
+        <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled || HamMenu ? "bg-white/80 backdrop-blur-lg shadow-[0_1px_0_rgba(42,20,85,0.08)]" : "bg-transparent"}`}>
+            <div className="flex justify-between h-20 w-full items-center md:px-20 px-5 text-brand-dark">
+                <Link aria-label="Link to Home" href={"/"} className="flex items-center gap-2" onClick={() => setHamMenu(false)}>
+                    <Image src={LogoK} alt="" width={44} height={40} />
+                    <span className="sm:block hidden font-semibold tracking-tight text-lg">Kimia Khoshnood</span>
+                </Link>
+                <nav className="lg:flex hidden gap-8 items-center text-[16px] font-medium">
+                    {navLinks.map(({ href, label }) => (
+                        <Link key={href} href={href} className="relative py-1 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-brand after:transition-transform after:duration-300 hover:after:scale-x-100">
+                            {label}
+                        </Link>
+                    ))}
+                    <Link href="/#contactID" className="py-2.5 px-6 rounded-full text-white bg-gradient-to-r from-brand to-brand-dark shadow-md shadow-brand/25 hover:shadow-lg hover:shadow-brand/40 hover:-translate-y-0.5 transition-all duration-200">
+                        Contact
+                    </Link>
+                </nav>
+                <button
+                    aria-label={HamMenu ? "Close menu" : "Open menu"}
+                    aria-expanded={HamMenu}
+                    className="lg:hidden flex items-center justify-center w-10 h-10 rounded-full text-brand hover:bg-brand-soft transition-colors"
+                    onClick={() => setHamMenu(!HamMenu)}
+                >
+                    {HamMenu ? <IoClose size={26} /> : <FaBars size={20} />}
+                </button>
             </div>
-            <div className="lg:flex hidden gap-8 items-center text-[17px]">
-                <Link className="hover:border-b-2 border-[#2A1455]" href="/#servicesID">Services</Link>
-                {/* <Link className="hover:border-b-2 border-[#2A1455]" href="/#worksID">Works</Link> */}
-                <Link className="hover:border-b-2 border-[#2A1455]" href="/#skillsID">Skills</Link>
-                <Link className="hover:border-b-2 border-[#2A1455]" href="/#contactID">Contact</Link>
-                {/* <Link className="py-3 px-7 hover:bg-gradient-to-l bg-gradient-to-r from-[#8750F7] to-[#2A1455] rounded-3xl text-white" href="/contactID">Hire me!</Link> */}
+            <div className={`lg:hidden absolute w-full px-5 transition-all duration-200 ${HamMenu ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"}`}>
+                <nav className="flex flex-col gap-1 text-[17px] font-medium text-brand-dark bg-white shadow-xl shadow-brand-dark/10 ring-1 ring-brand-dark/5 p-3 rounded-2xl">
+                    {[...navLinks, { href: "/#contactID", label: "Contact" }].map(({ href, label }) => (
+                        <Link key={href} href={href} className="hover:bg-brand-soft rounded-xl px-4 py-3 transition-colors" onClick={() => setHamMenu(false)}>
+                            {label}
+                        </Link>
+                    ))}
+                </nav>
             </div>
-            <div className="lg:hidden flex items-center gap-3">
-                {/* <Link className="flex py-3 px-7 bg-gradient-to-r from-[#8750F7] to-[#2A1455] rounded-3xl text-white text-[17px]" href="">Hire me!</Link> */}
-                
-                <FaBars className={`w-[25px] text-[#8750F7] ${HamMenu?"text-purple-800":""}`} size={"100%"} onClick={()=>setHamMenu(!HamMenu)}/>
-            </div>
-        </div>
-        <div>
-        <div className="px-5 py-1 w-full absolute">
-            <div className={`lg:hidden ${HamMenu?"flex":"hidden"} flex-col gap-1 text-[17px] bg-[#f1ebff] shadow-lg py-5 rounded-xl w-full relative z-50`}>
-                <Link className="hover:bg-purple-50 border-[#2A1455] px-5 py-2"  href="/#servicesID">Services</Link>
-                {/* <Link className="hover:bg-purple-50 border-[#2A1455] px-5 py-2" href="/#worksID">Works</Link> */}
-                <Link className="hover:bg-purple-50 border-[#2A1455] px-5 py-2" href="/#skillsID">Skills</Link>
-                <Link className="hover:bg-purple-50 border-[#2A1455] px-5 py-2" href="/#contactID">Contact</Link>
-            </div>
-        </div>
-        </div>
-        </div>
+        </header>
     )
 }
 

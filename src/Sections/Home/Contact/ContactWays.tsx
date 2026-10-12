@@ -8,26 +8,30 @@ export type ContactWaysProps = {
     svg: string,
     title: string,
     content: string,
+    href?: string,
 }
 
 // ----------------------------------------------------------------------
 
-const ContactWays = ({svg, title, content}:ContactWaysProps) => {
-    return(
+const ContactWays = ({svg, title, content, href}:ContactWaysProps) => {
+    const body = (
         <>
-        <div className="flex items-center gap-5">
-            <div className="w-[50px] h-[50px] rounded-full bg-gradient-to-t from-[#8650F6] to-[#2A1455] p-2">
-                {svg=="phone"?<FaPhone className='text-white p-1' size={"100%"}/>:null}
-                {svg=="mail"?<MdMail className='text-white p-1' size={"100%"}/>:null}
-                {svg=="map"?<FaMapMarkerAlt className='text-white p-1' size={"100%"}/>:null}
+            <div className="shrink-0 w-[52px] h-[52px] rounded-2xl bg-gradient-to-br from-brand to-brand-dark p-3 shadow-md shadow-brand/25 transition-transform duration-300 group-hover:scale-105">
+                {svg=="phone"?<FaPhone className='text-white p-0.5' size={"100%"}/>:null}
+                {svg=="mail"?<MdMail className='text-white' size={"100%"}/>:null}
+                {svg=="map"?<FaMapMarkerAlt className='text-white p-0.5' size={"100%"}/>:null}
             </div>
-            <div className="lg:w-[300px] w-[250px]">
-                <h5 className="text-lg">{title}</h5>
-                <span className="font-medium lg:text-xl text-lg text-[#2A1454]">{content}</span>
+            <div className="min-w-0">
+                <h5 className="text-sm font-medium text-[#140C1C]/50">{title}</h5>
+                <span className="block font-semibold lg:text-lg text-base text-brand-dark break-words">{content}</span>
             </div>
-        </div>
         </>
     )
+    const className = "group flex items-center gap-4 rounded-2xl p-3 -m-3 transition-colors duration-200"
+
+    return href
+        ? <a href={href} className={`${className} hover:bg-brand-soft`}>{body}</a>
+        : <div className={className}>{body}</div>
 }
 
 export default ContactWays

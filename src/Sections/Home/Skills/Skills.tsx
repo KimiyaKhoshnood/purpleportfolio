@@ -29,10 +29,10 @@ const Skills = () => {
     
     return(
         <>
-        <div id="skillsID" className="flex justify-center items-center flex-col gap-3 md:p-20 px-5 py-16">
-            <h2 className="font-bold md:text-5xl sm:text-4xl text-3xl p-1" id="textGradiant">My Skills</h2>
-            <p className="max-w-[660px] text-center pb-10 text-[17px]">Technologies I work with to build web applications, backend services, and scalable systems.</p>
-            <div className="flex gap-4 flex-wrap justify-center">
+        <div id="skillsID" className="flex justify-center items-center flex-col gap-4 md:p-20 px-5 py-16">
+            <h2 className="font-bold md:text-5xl sm:text-4xl text-3xl tracking-tight p-2" id="textGradiant">My Skills</h2>
+            <p className="max-w-[660px] text-center pb-8 text-[17px] leading-relaxed text-[#140C1C]/70">Technologies I work with to build web applications, backend services, and scalable systems.</p>
+            <div className="flex sm:gap-5 gap-3 flex-wrap justify-center max-w-[1080px]">
                 {
                     SkillsEachProps.map((elem, index)=>{
                         return(<SkillsEach img={elem.img} Icon={elem.Icon} iconColor={elem.iconColor} skillName={elem.skillName} key={index}/>)

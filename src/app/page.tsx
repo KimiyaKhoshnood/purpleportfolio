@@ -5,19 +5,20 @@ import QualityServices from "@/Sections/Home/QualityServicesBox/QualityServices"
 // import RecentWorks from "@/Sections/Home/RecentWorks/RecentWorks";
 import Skills from "@/Sections/Home/Skills/Skills";
 import StatusNumbersBox from "@/Sections/Home/StatusNumbersBox/StatusNumbersBox";
+import Reveal from "@/Sections/Layout/Reveal";
 
 
 export default function Home() {
-  
+
   return (
     <div className="">
       <HeroSection />
-      <StatusNumbersBox/>
-      <ExperienceAndEducation/>
+      <Reveal><StatusNumbersBox/></Reveal>
+      <Reveal><ExperienceAndEducation/></Reveal>
       {/* <RecentWorks/> */}
-      <QualityServices/>
-      <Skills/>
-      <Contact/>
+      <Reveal><QualityServices/></Reveal>
+      <Reveal><Skills/></Reveal>
+      <Reveal><Contact/></Reveal>
     </div>
   );
 }

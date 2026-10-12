@@ -10,13 +10,17 @@ export type QualityServicesBoxProps = {
 const QualityServicesBox = ({num, h3, p}:QualityServicesBoxProps) => {
     return (
         <>
-        <div className="flex items-center justify-between md:flex-nowrap flex-wrap w-full py-6 hover:bg-gradient-to-r from-[#8650F6] to-[#2A1455] hover:text-white group">
-            <div className="flex items-center text-[#8750F7] group-hover:text-white">
-                <span className="font-bold md:text-2xl text-xl lg:px-6 px-2">{num}</span>
-                <h3 className="lg:w-[320px] sm:w-[290px] font-bold lg:text-3xl text-2xl text-wrap">{h3}</h3>
+        <div className="relative overflow-hidden rounded-2xl group">
+            {/* gradient fades in on hover (gradients themselves can't transition) */}
+            <div className="absolute inset-0 bg-gradient-to-r from-brand to-brand-dark opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden />
+            <div className="relative flex items-center justify-between md:flex-nowrap flex-wrap w-full py-7 md:px-4 transition-colors duration-300 group-hover:text-white">
+                <div className="flex items-center text-brand group-hover:text-white transition-colors duration-300">
+                    <span className="font-mono font-semibold md:text-xl text-lg lg:px-6 px-2 opacity-70">{num}</span>
+                    <h3 className="lg:w-[340px] sm:w-[290px] font-bold lg:text-2xl text-xl tracking-tight text-wrap">{h3}</h3>
+                </div>
+                <p className="md:w-[570px] w-full text-[16px] leading-relaxed px-8 py-1 md:order-none order-last text-[#140C1C]/70 group-hover:text-white/90 transition-colors duration-300">{p}</p>
+                <FaArrowRightLong className="me-4 md:w-[28px] md:h-[28px] w-[22px] h-[22px] shrink-0 text-brand rotate-45 group-hover:-rotate-45 group-hover:text-white transition-all duration-300 sm:block hidden" size={"100%"}/>
             </div>
-            <p className="md:w-[570px] w-full text-[17px] px-8 py-1 md:order-none order-last">{p}</p>
-            <FaArrowRightLong className='md:w-[35px] md:h-[35px] w-[25px] h-[25px] text-[#8750F7]  rotate-45 group-hover:-rotate-45 sm:block hidden group-hover:text-white' size={"100%"}/>
         </div>
         </>
     )

@@ -4,7 +4,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #140C1C;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -14,11 +14,29 @@
   }
 } */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  scroll-behavior: smooth;
+}
+
+/* keep anchored sections clear of the sticky header */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+::selection {
+  background: #E8DEFD;
+  color: #2A1455;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #8650F6;
+  outline-offset: 3px;
 }
 
 
@@ -53,4 +71,30 @@ body {
 
 #eachWork:hover>div{
   opacity: 100%;
+}
+
+/* scroll reveal (see Reveal.tsx) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  #textOutline>div {
+    animation: none;
+  }
 }

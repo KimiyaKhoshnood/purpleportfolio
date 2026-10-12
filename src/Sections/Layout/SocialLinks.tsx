@@ -1,0 +1,37 @@
+import { FaGithub, FaLinkedinIn, FaTelegramPlane } from "react-icons/fa";
+import { TbMailFilled } from "react-icons/tb";
+import Link from "next/link";
+
+// ----------------------------------------------------------------------
+
+const socials = [
+    { label: "Github", href: "https://github.com/KimiyaKhoshnood", Icon: FaGithub },
+    { label: "Linkedin", href: "https://www.linkedin.com/in/kimiya-khoshnood", Icon: FaLinkedinIn },
+    { label: "mail", href: "mailto:kimiya.khoshnod@gmail.com", Icon: TbMailFilled },
+    { label: "Telegram", href: "https://t.me/KimiS_n", Icon: FaTelegramPlane },
+]
+
+// ----------------------------------------------------------------------
+
+const SocialLinks = ({ dark = false }: { dark?: boolean }) => {
+    return (
+        <div className="flex items-center gap-3">
+            {socials.map(({ label, href, Icon }) => (
+                <Link
+                    key={label}
+                    aria-label={`Link to ${label}`}
+                    href={href}
+                    target={href.startsWith("http") ? "_blank" : undefined}
+                    rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className={`w-[42px] h-[42px] flex items-center justify-center rounded-full border transition-all duration-200 ease-out hover:-translate-y-0.5 ${dark
+                        ? "border-white/20 text-white/80 hover:bg-white hover:text-brand-dark"
+                        : "border-brand/40 text-brand hover:bg-brand hover:border-brand hover:text-white hover:shadow-lg hover:shadow-brand/30"}`}
+                >
+                    <Icon size={18} />
+                </Link>
+            ))}
+        </div>
+    )
+}
+
+export default SocialLinks

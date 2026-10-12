@@ -1,4 +1,5 @@
 "use client"
+import { FiDownload } from "react-icons/fi";
 
 // ----------------------------------------------------------------------
 
@@ -11,8 +12,9 @@ const DownloadResumeBtn = () => {
   };
 
   return (
-    <button onClick={handleDownload} className="py-3 px-7 flex w-fit rounded-3xl font-medium border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all duration-200 ease-linear cursor-pointer">
+    <button onClick={handleDownload} className="group py-3 px-7 flex items-center gap-2 w-fit rounded-full font-medium text-white bg-gradient-to-r from-brand to-brand-dark shadow-lg shadow-brand/30 hover:shadow-xl hover:shadow-brand/40 hover:-translate-y-0.5 transition-all duration-200 ease-out cursor-pointer">
       Download CV
+      <FiDownload className="transition-transform duration-200 group-hover:translate-y-0.5" size={18} />
     </button>
   )
 }

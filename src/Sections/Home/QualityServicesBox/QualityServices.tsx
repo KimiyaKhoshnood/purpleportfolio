@@ -12,17 +12,14 @@ const QualityServices = () => {
 
     return (
         <>
-        <div id="servicesID" className="xl:p-20 px-5 py-10 bg-[#F6F3FC] flex flex-col gap-5 justify-center items-center">
-            <h2 className="font-bold md:text-5xl text-3xl p-3" id="textGradiant">My Quality Services</h2>
-            <p className="max-w-[660px] text-center pb-10 text-[17px]">I build reliable web applications by combining frontend development, backend engineering, and thoughtful technical decisions to turn ideas into functional products.</p>
-            <div className="w-full">
+        <div id="servicesID" className="xl:p-20 px-5 py-16 bg-brand-soft flex flex-col gap-4 justify-center items-center">
+            <h2 className="font-bold md:text-5xl text-3xl tracking-tight p-2" id="textGradiant">My Quality Services</h2>
+            <p className="max-w-[660px] text-center pb-8 text-[17px] leading-relaxed text-[#140C1C]/70">I build reliable web applications by combining frontend development, backend engineering, and thoughtful technical decisions to turn ideas into functional products.</p>
+            <div className="w-full flex flex-col divide-y divide-brand-dark/10">
                 {
                     QualityServicesProps.map((elem, index)=>{
                         return(
-                            <div key={index}>
-                            <QualityServicesBox num={elem.num} h3={elem.h3} p={elem.p}/>
-                            <hr/>
-                            </div>
+                            <QualityServicesBox num={elem.num} h3={elem.h3} p={elem.p} key={index}/>
                         )
                     })
                 }
