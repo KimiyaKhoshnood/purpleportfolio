@@ -19,7 +19,7 @@ const Header = () => {
             </div>
             <div className="lg:flex hidden gap-8 items-center text-[17px]">
                 <Link className="hover:border-b-2 border-[#2A1455]" href="/#servicesID">Services</Link>
-                <Link className="hover:border-b-2 border-[#2A1455]" href="/#worksID">Works</Link>
+                {/* <Link className="hover:border-b-2 border-[#2A1455]" href="/#worksID">Works</Link> */}
                 <Link className="hover:border-b-2 border-[#2A1455]" href="/#skillsID">Skills</Link>
                 <Link className="hover:border-b-2 border-[#2A1455]" href="/#contactID">Contact</Link>
                 {/* <Link className="py-3 px-7 hover:bg-gradient-to-l bg-gradient-to-r from-[#8750F7] to-[#2A1455] rounded-3xl text-white" href="/contactID">Hire me!</Link> */}
@@ -34,7 +34,7 @@ const Header = () => {
         <div className="px-5 py-1 w-full absolute">
             <div className={`lg:hidden ${HamMenu?"flex":"hidden"} flex-col gap-1 text-[17px] bg-[#f1ebff] shadow-lg py-5 rounded-xl w-full relative z-50`}>
                 <Link className="hover:bg-purple-50 border-[#2A1455] px-5 py-2"  href="/#servicesID">Services</Link>
-                <Link className="hover:bg-purple-50 border-[#2A1455] px-5 py-2" href="/#worksID">Works</Link>
+                {/* <Link className="hover:bg-purple-50 border-[#2A1455] px-5 py-2" href="/#worksID">Works</Link> */}
                 <Link className="hover:bg-purple-50 border-[#2A1455] px-5 py-2" href="/#skillsID">Skills</Link>
                 <Link className="hover:bg-purple-50 border-[#2A1455] px-5 py-2" href="/#contactID">Contact</Link>
             </div>

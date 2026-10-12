@@ -27,13 +27,12 @@ const HeroSection = () => {
             className="xl:text-7xl lg:text-5xl text-4xl font-bold py-3"
             id="textGradiant"
           >
-            Web Developer +<br className="md:block hidden" />
-            UX Designer
+            Software Engineer
           </h1>
           <p className="md:block hidden lg:text-2xl sm:text-xl text-lg font-normal text-[#140C1C]">
             {/* I break down complex user experience problems to create integrity */}
             {/* focussed solutions that connect billions of people */}
-            Where Aesthetic Meets Functionality in Every Pixel.
+            Building reliable systems, from the database to the browser.
           </p>
           <div className="md:flex hidden w-full h-fit flex-wrap items-center md:justify-start justify-center gap-3 text-[rgb(135,80,247)]">
             <DownloadResumeBtn/>
@@ -47,7 +46,7 @@ const HeroSection = () => {
               </Link>
               <Link
                 aria-label="Link to Linkedin"
-                href="https://www.linkedin.com/in/kimiyaKhoshnood"
+                href="https://www.linkedin.com/in/kimiya-khoshnood"
                 className="w-[40px] h-[40px] flex items-center justify-center rounded-full border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all  duration-200 ease-linear"
               >
                 <FaLinkedinIn className="px-[10px]" size={"100%"}/>
@@ -77,7 +76,7 @@ const HeroSection = () => {
         <p className="md:hidden block px-7 py-5 lg:text-2xl sm:text-xl text-lg font-normal text-[#140C1C]">
           {/* I break down complex user experience problems to create integrity */}
           {/* focussed solutions that connect billions of people */}
-          Where Aesthetic Meets Functionality in Every Pixel.
+          Building reliable systems, from the database to the browser.
         </p>
         <div className="md:hidden flex px-7 w-full h-fit flex-wrap items-center md:justify-start justify-center gap-3 text-[rgb(135,80,247)]">
           <DownloadResumeBtn/>
@@ -89,7 +88,7 @@ const HeroSection = () => {
               <FaGithub className="p-2" size={"100%"}/>
             </Link>
             <Link
-              href="https://www.linkedin.com/in/kimiyaKhoshnood"
+              href="https://www.linkedin.com/in/kimiya-khoshnood"
               className="w-[40px] h-[40px] flex items-center justify-center rounded-full border border-[#8750F7] hover:bg-[#8750F7] hover:text-white transition-all  duration-200 ease-linear"
             >
               <FaLinkedinIn className="px-[10px]" size={"100%"}/>

@@ -13,7 +13,7 @@ const Footer = () => {
             <Image src={LogoK} alt="" width={75} height={75}></Image>
             <div className="flex gap-8 text-white font-bold">
                 <Link href={"/#servicesID"}>Services.</Link>
-                <Link href={"/#worksID"}>Works.</Link>
+                {/* <Link href={"/#worksID"}>Works.</Link> */}
                 <Link href={"/#skillsID"}>Skills.</Link>
                 <Link href={"/#contactID"}>Contact.</Link>
             </div>
