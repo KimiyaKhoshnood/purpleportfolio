@@ -46,6 +46,27 @@ button:focus-visible {
   -webkit-text-fill-color: transparent;
 }
 
+[dir="rtl"] #textGradiant {
+  background: -webkit-linear-gradient(right, #8650F6, #2A1455);
+  -webkit-background-clip: text;
+}
+
+/* Persian: rounded Baloo Bhaijaan 2 for text, playful Lalezar for headings,
+   and no letter-spacing (it breaks the joins between Persian letters) */
+html[lang="fa"] body {
+  font-family: var(--font-fa-body), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Lalezar ships a single weight, so keep the browser from faking bold */
+html[lang="fa"] :is(h1, h2, h3) {
+  font-family: var(--font-fa-display), var(--font-fa-body), sans-serif;
+  font-weight: 400;
+}
+
+html[lang="fa"] * {
+  letter-spacing: normal !important;
+}
+
 
 @media (max-width: 800px) {
   #textOutline{

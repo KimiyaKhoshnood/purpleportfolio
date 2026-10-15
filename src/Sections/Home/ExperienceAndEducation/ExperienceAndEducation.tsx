@@ -1,24 +1,14 @@
-import ExperienceAndEducationEach, { ExperienceAndEducationEachProp } from "./ExperienceAndEducationEach"
+import ExperienceAndEducationEach from "./ExperienceAndEducationEach"
 import { PiStudentBold } from "react-icons/pi";
 import { PiMedal } from "react-icons/pi";
+import { Dictionary } from "@/i18n/dictionaries";
 
 // ----------------------------------------------------------------------
 
-const ExperienceAndEducation = () => {
-    const ExperienceProps: ExperienceAndEducationEachProp[] = [
-        { date: "Jun 2024 - Aug 2024", title: "Manual QA Intern", span: "SD Studio, Tehran" },
-        { date: "Mar 2025 - Dec 2025", title: "Front-end Developer", span: "Hazareh Sevom (HZ3), Tehran" },
-        { date: "Dec 2025 - Present", title: "Software Engineer", span: "Orchid Pharmed, Tehran" },
-    ];
-    const EducationProps: ExperienceAndEducationEachProp[] = [
-        { date: "2022 - 2025", title: "Statistics", span: "University of Tehran" },
-        { date: "2025 - Present", title: "Software Engineering", span: "Islamic Azad University" },
-    ];
-
-
+const ExperienceAndEducation = ({ dict }: { dict: Dictionary["timeline"] }) => {
     const columns = [
-        { heading: "My Experience", Icon: PiMedal, items: ExperienceProps },
-        { heading: "My Education", Icon: PiStudentBold, items: EducationProps },
+        { heading: dict.experienceHeading, Icon: PiMedal, items: dict.experience },
+        { heading: dict.educationHeading, Icon: PiStudentBold, items: dict.education },
     ]
 
     return (
@@ -37,7 +27,7 @@ const ExperienceAndEducation = () => {
                             <ol className="relative ms-2 flex flex-col gap-5 border-s-2 border-brand-light">
                                 {
                                     [...items].reverse().map((elem) => {
-                                        return (<ExperienceAndEducationEach date={elem.date} title={elem.title} span={elem.span} key={elem.title} />)
+                                        return (<ExperienceAndEducationEach date={elem.date} title={elem.title} span={elem.span} current={elem.current} key={elem.title} />)
                                     })
                                 }
                             </ol>

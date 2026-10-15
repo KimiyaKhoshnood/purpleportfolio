@@ -7,10 +7,11 @@ import TsLogo from "../../../../public/TsLogo.svg"
 import GitLogo from "../../../../public/GitLogo.svg"
 import { SiDocker, SiNestjs, SiNodedotjs, SiPostgresql, SiPrisma, SiRedis } from "react-icons/si"
 import { TbTopologyStar3 } from "react-icons/tb"
+import { Dictionary } from "@/i18n/dictionaries"
 
 // ----------------------------------------------------------------------
 
-const Skills = () => {
+const Skills = ({ dict }: { dict: Dictionary["skills"] }) => {
     const SkillsEachProps: SkillsEachProps[] = [
         {img: ReactLogo, skillName: "React"},
         {img: NextLogo, skillName: "Next.js"},
@@ -30,8 +31,8 @@ const Skills = () => {
     return(
         <>
         <div id="skillsID" className="flex justify-center items-center flex-col gap-4 md:p-20 px-5 py-16">
-            <h2 className="font-bold md:text-5xl sm:text-4xl text-3xl tracking-tight p-2" id="textGradiant">My Skills</h2>
-            <p className="max-w-[660px] text-center pb-8 text-[17px] leading-relaxed text-[#140C1C]/70">Technologies I work with to build web applications, backend services, and scalable systems.</p>
+            <h2 className="font-bold md:text-5xl sm:text-4xl text-3xl tracking-tight p-2" id="textGradiant">{dict.heading}</h2>
+            <p className="max-w-[660px] text-center pb-8 text-[17px] leading-relaxed text-[#140C1C]/70">{dict.intro}</p>
             <div className="flex sm:gap-5 gap-3 flex-wrap justify-center max-w-[1080px]">
                 {
                     SkillsEachProps.map((elem, index)=>{

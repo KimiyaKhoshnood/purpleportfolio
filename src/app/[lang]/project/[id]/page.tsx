@@ -2,14 +2,17 @@ import HeroProject from '@/Sections/Project/HeroProject/HeroProject'
 import ProjectDetails from '@/Sections/Project/ProjectDetails/ProjectDetails'
 import { RecentWorksEachProp } from '@/Sections/Home/RecentWorks/RecentWorksInfo'
 import React from 'react'
+import { notFound } from 'next/navigation'
 
 interface EachProduct {
-  params: Promise<{id: string}>,
+  params: Promise<{lang: string, id: string}>,
   searchParams: Promise<Record<string, string | undefined>>
 }
 
 const page = async ({params}:EachProduct) => {
-    const { id } = await params
+    const { lang, id } = await params
+    // project write-ups are English-only
+    if (lang !== 'en') notFound()
     const ProjectData = RecentWorksEachProp[Number(id)-1]
     const len = RecentWorksEachProp.length    
     const prevId = (Number(id) == 1) ? len :Number(id)-1

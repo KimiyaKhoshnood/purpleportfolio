@@ -9,11 +9,13 @@ export type ContactWaysProps = {
     title: string,
     content: string,
     href?: string,
+    // phone numbers and emails must stay left-to-right inside RTL text
+    ltr?: boolean,
 }
 
 // ----------------------------------------------------------------------
 
-const ContactWays = ({svg, title, content, href}:ContactWaysProps) => {
+const ContactWays = ({svg, title, content, href, ltr}:ContactWaysProps) => {
     const body = (
         <>
             <div className="shrink-0 w-[52px] h-[52px] rounded-2xl bg-gradient-to-br from-brand to-brand-dark p-3 shadow-md shadow-brand/25 transition-transform duration-300 group-hover:scale-105">
@@ -23,7 +25,7 @@ const ContactWays = ({svg, title, content, href}:ContactWaysProps) => {
             </div>
             <div className="min-w-0">
                 <h5 className="text-sm font-medium text-[#140C1C]/50">{title}</h5>
-                <span className="block font-semibold lg:text-lg text-base text-brand-dark break-words">{content}</span>
+                <span dir={ltr ? "ltr" : undefined} className="block font-semibold lg:text-lg text-base text-brand-dark break-words rtl:text-end">{content}</span>
             </div>
         </>
     )

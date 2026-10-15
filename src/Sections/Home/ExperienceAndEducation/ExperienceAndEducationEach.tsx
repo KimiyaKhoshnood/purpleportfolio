@@ -3,13 +3,13 @@
 export type ExperienceAndEducationEachProp = {
     date : string,
     title : string,
-    span : string
+    span : string,
+    current?: boolean,
 }
 
 // ----------------------------------------------------------------------
 
-const ExperienceAndEducationEach = ({date, title, span}:ExperienceAndEducationEachProp) => {
-    const isCurrent = date.includes("Present")
+const ExperienceAndEducationEach = ({date, title, span, current: isCurrent}:ExperienceAndEducationEachProp) => {
 
     return(
         <>
