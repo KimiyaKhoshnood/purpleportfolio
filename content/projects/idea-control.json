@@ -1,0 +1,31 @@
+{
+  "title": "Idea Control",
+  "titleFa": "",
+  "published": false,
+  "date": "2024-11-19",
+  "cover": "/images/projects/idea-control/cover.png",
+  "summary": {
+    "en": "I developed a corporate website for Idea Control Company as my first company project. The website includes around 8 fully responsive pages, built with React, React Router, Tailwind CSS, and Vite, with a UI entirely designed by me.",
+    "fa": ""
+  },
+  "description": {
+    "en": "In this project, I created a multi-page website for Idea Control Company, featuring sections like Home, Services, About Us, Projects, Articles, Industries, and more. I built the site using React, managing content with JavaScript objects instead of APIs. I used useState and useEffect hooks for state management and organized the code with reusable components for better maintainability. For smooth navigation, I implemented routing with React Router and optimized performance with lazy loading. The UI was fully designed by me, focusing on both aesthetics and user experience. I also wrote all the website’s content and selected images to align with the company’s branding. Tailwind CSS ensured a clean, modern, and fully responsive design, while Vite provided a fast development environment. The project hasn’t been deployed yet but will be live soon.",
+    "fa": ""
+  },
+  "client": {
+    "en": "Idea Control",
+    "fa": ""
+  },
+  "tags": [
+    "company",
+    "uiux"
+  ],
+  "stack": [
+    "React",
+    "React Router",
+    "Tailwind CSS",
+    "Vite"
+  ],
+  "liveUrl": null,
+  "repoUrl": null
+}

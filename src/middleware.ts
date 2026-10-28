@@ -22,6 +22,6 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-    // skip Next internals and static files (anything with an extension)
-    matcher: ["/((?!_next|api|.*\\..*).*)"],
+    // skip Next internals, the admin panel and static files (anything with an extension)
+    matcher: ["/((?!_next|api|keystatic|.*\\..*).*)"],
 }

@@ -1,0 +1,21 @@
+{
+  "intro": {
+    "en": "Technologies I work with to build web applications, backend services, and scalable systems.",
+    "fa": "فناوری‌هایی که برای ساخت وب‌اپلیکیشن‌ها، سرویس‌های بک‌اند و سیستم‌های مقیاس‌پذیر با آن‌ها کار می‌کنم."
+  },
+  "items": [
+    { "name": "React", "icon": "react", "image": null },
+    { "name": "Next.js", "icon": "nextjs", "image": null },
+    { "name": "TypeScript", "icon": "typescript", "image": null },
+    { "name": "JavaScript", "icon": "javascript", "image": null },
+    { "name": "NestJS", "icon": "nestjs", "image": null },
+    { "name": "Node.js", "icon": "nodejs", "image": null },
+    { "name": "PostgreSQL", "icon": "postgresql", "image": null },
+    { "name": "Prisma", "icon": "prisma", "image": null },
+    { "name": "Redis", "icon": "redis", "image": null },
+    { "name": "Docker", "icon": "docker", "image": null },
+    { "name": "Microservices", "icon": "microservices", "image": null },
+    { "name": "Redux", "icon": "redux", "image": null },
+    { "name": "Git", "icon": "git", "image": null }
+  ]
+}

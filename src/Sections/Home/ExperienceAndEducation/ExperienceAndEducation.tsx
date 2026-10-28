@@ -1,14 +1,16 @@
-import ExperienceAndEducationEach from "./ExperienceAndEducationEach"
+import ExperienceAndEducationEach, { ExperienceAndEducationEachProp } from "./ExperienceAndEducationEach"
 import { PiStudentBold } from "react-icons/pi";
 import { PiMedal } from "react-icons/pi";
-import { Dictionary } from "@/i18n/dictionaries";
 
 // ----------------------------------------------------------------------
 
-const ExperienceAndEducation = ({ dict }: { dict: Dictionary["timeline"] }) => {
+type Column = { heading: string, items: ExperienceAndEducationEachProp[] }
+
+// items arrive already sorted newest first
+const ExperienceAndEducation = ({ experience, education }: { experience: Column, education: Column }) => {
     const columns = [
-        { heading: dict.experienceHeading, Icon: PiMedal, items: dict.experience },
-        { heading: dict.educationHeading, Icon: PiStudentBold, items: dict.education },
+        { ...experience, Icon: PiMedal },
+        { ...education, Icon: PiStudentBold },
     ]
 
     return (
@@ -23,11 +25,10 @@ const ExperienceAndEducation = ({ dict }: { dict: Dictionary["timeline"] }) => {
                                 </span>
                                 <span id="textGradiant">{heading}</span>
                             </h2>
-                            {/* newest first */}
                             <ol className="relative ms-2 flex flex-col gap-5 border-s-2 border-brand-light">
                                 {
-                                    [...items].reverse().map((elem) => {
-                                        return (<ExperienceAndEducationEach date={elem.date} title={elem.title} span={elem.span} current={elem.current} key={elem.title} />)
+                                    items.map((elem, index) => {
+                                        return (<ExperienceAndEducationEach {...elem} key={index} />)
                                     })
                                 }
                             </ol>

@@ -1,0 +1,24 @@
+{
+  "title": "Digikala",
+  "published": false,
+  "date": "2024-10-29",
+  "cover": "/images/projects/digikala/cover.png",
+  "summary": {
+    "en": "I developed a Digikala clone as my first project using TypeScript and Redux. This fully responsive web app includes a home page, product page, and login section, built with React, Redux, Tailwind CSS, and Vite for fast development."
+  },
+  "description": {
+    "en": "In this project, I created a Digikala clone featuring a home page, product page, and a login section. I used React with TypeScript for type-safe development and managed state efficiently with Redux. The project integrates APIs using JSON Server and Axios for smooth data fetching. I implemented dynamic routing with React Router and form handling with React Hook Form, especially for the login section. Skeleton loading enhances the user experience during data fetching, while Tailwind CSS ensures a responsive, modern UI. Built with Vite for optimized performance, this project helped me strengthen my skills in front-end development, state management, and responsive design."
+  },
+  "client": {},
+  "tags": [
+    "clone"
+  ],
+  "stack": [
+    "React",
+    "TypeScript",
+    "Redux",
+    "Tailwind CSS",
+    "Vite"
+  ],
+  "repoUrl": "https://github.com/KimiyaKhoshnood/digikalaTS"
+}

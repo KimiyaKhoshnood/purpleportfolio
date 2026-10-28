@@ -1,0 +1,28 @@
+{
+  "name": {
+    "en": "Kimia Khoshnood",
+    "fa": "کیمیا خوشنود"
+  },
+  "role": {
+    "en": "Software Engineer",
+    "fa": "مهندس نرم‌افزار"
+  },
+  "badge": {
+    "en": "I am Kimia",
+    "fa": "من کیمیا هستم"
+  },
+  "tagline": {
+    "en": "Building reliable systems, from the database to the browser.",
+    "fa": "ساخت سیستم‌های قابل‌اعتماد، از پایگاه داده تا مرورگر."
+  },
+  "resume": "/resume/resume.pdf",
+  "email": "kimiya.khoshnod@gmail.com",
+  "phone": "+98 910 879 3797",
+  "address": {
+    "en": "District 5, Tehran, Iran",
+    "fa": "منطقه ۵، تهران، ایران"
+  },
+  "github": "https://github.com/KimiyaKhoshnood",
+  "linkedin": "https://www.linkedin.com/in/kimiya-khoshnood",
+  "telegram": "https://t.me/KimiS_n"
+}

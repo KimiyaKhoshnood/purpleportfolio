@@ -9,7 +9,7 @@ const StatusNumbersBox = ({ stats }: { stats: StatusNumbersProps[] }) => {
             {
                 stats.map((elem, index) =>{
                     return(
-                        <StatusNumbers num={elem.num} lineFirst={elem.lineFirst} lineSecond={elem.lineSecond} key={index}/>
+                        <StatusNumbers num={elem.num} label={elem.label} key={index}/>
                     )
                 })
             }

@@ -1,22 +1,26 @@
 import Image from "next/image";
 import purplePerson from "../../../../public/undraw_mobile-development_tjxm.svg"
 import DownloadResumeBtn from "./DownloadResumeBtn";
-import SocialLinks from "@/Sections/Layout/SocialLinks";
-import { Dictionary } from "@/i18n/dictionaries";
+import SocialLinks, { Socials } from "@/Sections/Layout/SocialLinks";
 
 // ----------------------------------------------------------------------
 
-const HeroActions = ({ downloadCV }: { downloadCV: string }) => (
+type HeroActionsProps = { downloadCV: string, resumeHref: string | null, socials: Socials }
+
+const HeroActions = ({ downloadCV, resumeHref, socials }: HeroActionsProps) => (
   <div className="flex w-full h-fit flex-wrap items-center md:justify-start justify-center gap-4">
-    <DownloadResumeBtn label={downloadCV} />
-    <SocialLinks />
+    {resumeHref && <DownloadResumeBtn label={downloadCV} href={resumeHref} />}
+    <SocialLinks links={socials} />
   </div>
 )
 
 // ----------------------------------------------------------------------
 
-const HeroSection = ({ dict }: { dict: Dictionary["hero"] }) => {
-  const { badge, title, tagline, downloadCV, outline } = dict
+type HeroSectionProps = HeroActionsProps & { badge: string, title: string, tagline: string, outline: string }
+
+const HeroSection = ({ badge, title, tagline, outline, ...actions }: HeroSectionProps) => {
+  // first word on its own line on desktop: "Software / Engineer"
+  const [firstWord, ...restWords] = title.split(" ")
 
   return (
     <div className="relative overflow-hidden -mt-20 pt-20 flex flex-col bg-gradient-to-tr rtl:bg-gradient-to-tl from-white via-white to-brand-light">
@@ -39,13 +43,13 @@ const HeroSection = ({ dict }: { dict: Dictionary["hero"] }) => {
             className="xl:text-7xl lg:text-6xl text-5xl font-bold tracking-tight leading-[1.05] rtl:leading-[1.3] pb-2"
             id="textGradiant"
           >
-            {title[0]}<br className="md:block hidden" /> {title[1]}
+            {firstWord}<br className="md:block hidden" /> {restWords.join(" ")}
           </h1>
           <p className="md:block hidden lg:text-xl text-lg text-[#140C1C]/70 max-w-[480px] leading-relaxed">
             {tagline}
           </p>
           <div className="md:flex hidden pt-3">
-            <HeroActions downloadCV={downloadCV} />
+            <HeroActions {...actions} />
           </div>
         </div>
         <div className="md:w-1/2 w-full h-full flex justify-center items-center py-8">
@@ -60,7 +64,7 @@ const HeroSection = ({ dict }: { dict: Dictionary["hero"] }) => {
           {tagline}
         </p>
         <div className="md:hidden flex px-7">
-          <HeroActions downloadCV={downloadCV} />
+          <HeroActions {...actions} />
         </div>
       </div>
     </div>

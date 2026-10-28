@@ -5,6 +5,7 @@ import Header from "@/Sections/Layout/Header/Header";
 import Footer from "@/Sections/Layout/Footer/Footer";
 import { defaultLocale, isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { getProjects, getSiteContent, pick } from "@/content";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,12 +39,15 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: LayoutProps): Promise<Metadata> {
-  const { lang } = await params
-  const { meta } = getDictionary(isLocale(lang) ? lang : defaultLocale)
+  const { lang: param } = await params
+  const lang = isLocale(param) ? param : defaultLocale
+  const { profile } = await getSiteContent()
+  const name = pick(profile.name, lang)
   return {
     metadataBase: new URL("https://kimiyakhoshnood.vercel.app"),
-    title: meta.title,
-    description: meta.description,
+    // project pages set their own title: "Digikala | Kimia Khoshnood"
+    title: { default: name, template: `%s | ${name}` },
+    description: pick(profile.role, lang),
   }
 }
 
@@ -51,6 +55,10 @@ export default async function RootLayout({ children, params }: LayoutProps) {
   const { lang: param } = await params
   const lang = isLocale(param) ? param : defaultLocale
   const dict = getDictionary(lang)
+  const { profile } = await getSiteContent()
+  const hasWorks = (await getProjects()).length > 0
+  const name = pick(profile.name, lang)
+  const socials = { github: profile.github, linkedin: profile.linkedin, email: profile.email, telegram: profile.telegram }
 
   return (
     <html
@@ -59,9 +67,9 @@ export default async function RootLayout({ children, params }: LayoutProps) {
       className={`${geistSans.variable} ${geistMono.variable} ${lang === "fa" ? `${baloo.variable} ${lalezar.variable}` : ""}`}
     >
       <body className="font-sans antialiased">
-        <Header lang={lang} dict={dict.nav}/>
+        <Header lang={lang} dict={dict.nav} name={name} hasWorks={hasWorks}/>
         {children}
-        <Footer lang={lang} dict={dict}/>
+        <Footer lang={lang} dict={dict} name={name} hasWorks={hasWorks} socials={socials}/>
       </body>
     </html>
   );

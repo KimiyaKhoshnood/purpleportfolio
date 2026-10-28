@@ -4,16 +4,23 @@ import Link from "next/link";
 
 // ----------------------------------------------------------------------
 
-const socials = [
-    { label: "Github", href: "https://github.com/KimiyaKhoshnood", Icon: FaGithub },
-    { label: "Linkedin", href: "https://www.linkedin.com/in/kimiya-khoshnood", Icon: FaLinkedinIn },
-    { label: "mail", href: "mailto:kimiya.khoshnod@gmail.com", Icon: TbMailFilled },
-    { label: "Telegram", href: "https://t.me/KimiS_n", Icon: FaTelegramPlane },
-]
+export type Socials = {
+    github: string | null,
+    linkedin: string | null,
+    email: string | null,
+    telegram: string | null,
+}
 
 // ----------------------------------------------------------------------
 
-const SocialLinks = ({ dark = false }: { dark?: boolean }) => {
+const SocialLinks = ({ links, dark = false }: { links: Socials, dark?: boolean }) => {
+    const socials = [
+        { label: "GitHub", href: links.github, Icon: FaGithub },
+        { label: "LinkedIn", href: links.linkedin, Icon: FaLinkedinIn },
+        { label: "Email", href: links.email && `mailto:${links.email}`, Icon: TbMailFilled },
+        { label: "Telegram", href: links.telegram, Icon: FaTelegramPlane },
+    ].filter((s): s is typeof s & { href: string } => !!s.href)
+
     return (
         <div className="flex items-center gap-3">
             {socials.map(({ label, href, Icon }) => (

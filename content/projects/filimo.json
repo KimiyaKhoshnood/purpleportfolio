@@ -1,0 +1,30 @@
+{
+  "title": "Filimo",
+  "titleFa": "",
+  "published": false,
+  "date": "2024-08-02",
+  "cover": "/images/projects/filimo/cover.png",
+  "summary": {
+    "en": "I developed a Filimo clone as my first project using JavaScript. It features a fully responsive home page, built with Tailwind CSS, JSON Server for API integration, and Axios for data fetching.",
+    "fa": ""
+  },
+  "description": {
+    "en": "In this project, I created a Filimo clone focusing on the home page. I used vanilla JavaScript with modern ES6+ features like arrow functions, template literals, and destructuring to enhance code readability and efficiency. JSON Server was integrated as a mock API for dynamic data handling, while Axios facilitated smooth data fetching. The UI is styled with Tailwind CSS, ensuring a clean, fully responsive design across all devices. This project helped me strengthen my core JavaScript skills, API integration, and responsive web design techniques.",
+    "fa": ""
+  },
+  "client": {
+    "en": "",
+    "fa": ""
+  },
+  "tags": [
+    "clone"
+  ],
+  "stack": [
+    "JavaScript",
+    "Tailwind CSS",
+    "JSON Server",
+    "Axios"
+  ],
+  "liveUrl": null,
+  "repoUrl": "https://github.com/KimiyaKhoshnood/filimoKimia"
+}

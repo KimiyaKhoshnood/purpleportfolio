@@ -1,0 +1,46 @@
+{
+  "experience": [
+    {
+      "title": { "en": "Software Engineer", "fa": "مهندس نرم‌افزار" },
+      "place": { "en": "Orchid Pharmed, Tehran", "fa": "ارکید فارمد، تهران" },
+      "start": "2025-12-01",
+      "end": null,
+      "precision": "month",
+      "description": { "en": "", "fa": "" }
+    },
+    {
+      "title": { "en": "Front-end Developer", "fa": "توسعه‌دهنده فرانت‌اند" },
+      "place": { "en": "Hazareh Sevom (HZ3), Tehran", "fa": "هزاره سوم (HZ3)، تهران" },
+      "start": "2025-03-01",
+      "end": "2025-12-01",
+      "precision": "month",
+      "description": { "en": "", "fa": "" }
+    },
+    {
+      "title": { "en": "Manual QA Intern", "fa": "کارآموز تست دستی (QA)" },
+      "place": { "en": "SD Studio, Tehran", "fa": "اس‌دی استودیو، تهران" },
+      "start": "2024-06-01",
+      "end": "2024-08-01",
+      "precision": "month",
+      "description": { "en": "", "fa": "" }
+    }
+  ],
+  "education": [
+    {
+      "title": { "en": "Software Engineering", "fa": "مهندسی نرم‌افزار" },
+      "place": { "en": "Islamic Azad University", "fa": "دانشگاه آزاد اسلامی" },
+      "start": "2025-01-01",
+      "end": null,
+      "precision": "year",
+      "description": { "en": "", "fa": "" }
+    },
+    {
+      "title": { "en": "Statistics", "fa": "آمار" },
+      "place": { "en": "University of Tehran", "fa": "دانشگاه تهران" },
+      "start": "2022-01-01",
+      "end": "2025-01-01",
+      "precision": "year",
+      "description": { "en": "", "fa": "" }
+    }
+  ]
+}

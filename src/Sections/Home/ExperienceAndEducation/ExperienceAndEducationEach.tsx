@@ -5,11 +5,12 @@ export type ExperienceAndEducationEachProp = {
     title : string,
     span : string,
     current?: boolean,
+    description?: string,
 }
 
 // ----------------------------------------------------------------------
 
-const ExperienceAndEducationEach = ({date, title, span, current: isCurrent}:ExperienceAndEducationEachProp) => {
+const ExperienceAndEducationEach = ({date, title, span, current: isCurrent, description}:ExperienceAndEducationEachProp) => {
 
     return(
         <>
@@ -23,6 +24,7 @@ const ExperienceAndEducationEach = ({date, title, span, current: isCurrent}:Expe
                 <span className="w-fit rounded-full bg-brand-soft px-3 py-1 text-sm font-semibold text-brand">{date}</span>
                 <h3 className="font-bold lg:text-xl text-lg text-brand-dark">{title}</h3>
                 <span className="text-[15px] text-[#140C1C]/60">{span}</span>
+                {description && <p className="pt-1 text-[15px] leading-relaxed text-[#140C1C]/70 whitespace-pre-line">{description}</p>}
             </div>
         </li>
         </>

@@ -11,9 +11,9 @@ import { Dictionary } from "@/i18n/dictionaries";
 
 // ----------------------------------------------------------------------
 
-type HeaderProps = { lang: Locale, dict: Dictionary["nav"] }
+type HeaderProps = { lang: Locale, dict: Dictionary["nav"], name: string, hasWorks: boolean }
 
-const Header = ({ lang, dict }: HeaderProps) => {
+const Header = ({ lang, dict, name, hasWorks }: HeaderProps) => {
     const [HamMenu, setHamMenu] = useState(false)
     const [scrolled, setScrolled] = useState(false)
     const pathname = usePathname()
@@ -27,7 +27,7 @@ const Header = ({ lang, dict }: HeaderProps) => {
 
     const navLinks = [
         { href: localePath(lang, "/#servicesID"), label: dict.services },
-        // { href: localePath(lang, "/#worksID"), label: "Works" },
+        ...(hasWorks ? [{ href: localePath(lang, "/#worksID"), label: dict.works }] : []),
         { href: localePath(lang, "/#skillsID"), label: dict.skills },
     ]
     const contactHref = localePath(lang, "/#contactID")
@@ -55,7 +55,7 @@ const Header = ({ lang, dict }: HeaderProps) => {
             <div className="flex justify-between h-20 w-full items-center md:px-20 px-5 text-brand-dark">
                 <Link aria-label="Link to Home" href={localePath(lang, "/")} className="flex items-center gap-2" onClick={() => setHamMenu(false)}>
                     <Image src={LogoK} alt="" width={44} height={40} />
-                    <span className="sm:block hidden font-semibold tracking-tight text-lg">{dict.name}</span>
+                    <span className="sm:block hidden font-semibold tracking-tight text-lg">{name}</span>
                 </Link>
                 <nav className="lg:flex hidden gap-8 items-center text-[16px] font-medium">
                     {navLinks.map(({ href, label }) => (

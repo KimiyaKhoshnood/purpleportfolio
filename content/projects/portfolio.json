@@ -1,0 +1,30 @@
+{
+  "title": "Portfolio",
+  "titleFa": "",
+  "published": false,
+  "date": "2023-04-08",
+  "cover": "/images/projects/portfolio/cover.png",
+  "summary": {
+    "en": "I designed my first personal portfolio website using Bootstrap. It’s a fully responsive, multi-page website showcasing my skills and projects.",
+    "fa": ""
+  },
+  "description": {
+    "en": "In this project, I created a multi-page personal portfolio website to showcase my work and skills. I used Bootstrap to design a clean, responsive layout that adapts seamlessly to different screen sizes. The website features sections like Home, About Me, Projects, and Contact, providing a comprehensive overview of my background and experience.",
+    "fa": ""
+  },
+  "client": {
+    "en": "",
+    "fa": ""
+  },
+  "tags": [
+    "clone",
+    "uiux"
+  ],
+  "stack": [
+    "Bootstrap",
+    "HTML",
+    "CSS"
+  ],
+  "liveUrl": null,
+  "repoUrl": "https://github.com/KimiyaKhoshnood/KimiaKhoshnoodBootstrap"
+}

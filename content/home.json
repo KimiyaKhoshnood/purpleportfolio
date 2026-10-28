@@ -1,0 +1,72 @@
+{
+  "stats": [
+    {
+      "value": "3+",
+      "label": {
+        "en": "Years of Experience",
+        "fa": "سال سابقه کار"
+      }
+    },
+    {
+      "value": "30+",
+      "label": {
+        "en": "Projects Completed",
+        "fa": "پروژه انجام‌شده"
+      }
+    },
+    {
+      "value": "10+",
+      "label": {
+        "en": "Technologies Learned",
+        "fa": "فناوری آموخته‌شده"
+      }
+    },
+    {
+      "value": "2",
+      "label": {
+        "en": "Team Collaborations",
+        "fa": "همکاری تیمی"
+      }
+    }
+  ],
+  "servicesIntro": {
+    "en": "I build reliable web applications by combining frontend development, backend engineering, and thoughtful technical decisions to turn ideas into functional products.",
+    "fa": "با ترکیب توسعه فرانت‌اند، مهندسی بک‌اند و تصمیم‌های فنی سنجیده، وب‌اپلیکیشن‌های قابل‌اعتماد می‌سازم و ایده‌ها را به محصولاتی کاربردی تبدیل می‌کنم."
+  },
+  "services": [
+    {
+      "title": {
+        "en": "Full-Stack Development",
+        "fa": "توسعه فول‌استک"
+      },
+      "description": {
+        "en": "I develop web applications using React, Next.js, and NestJS, building responsive user interfaces and backend services that work together seamlessly.",
+        "fa": "با React، Next.js و NestJS وب‌اپلیکیشن توسعه می‌دهم؛ از رابط‌های کاربری واکنش‌گرا تا سرویس‌های بک‌اندی که به‌خوبی در کنار هم کار می‌کنند."
+      }
+    },
+    {
+      "title": {
+        "en": "Backend Development & API Integration",
+        "fa": "توسعه بک‌اند و یکپارچه‌سازی API"
+      },
+      "description": {
+        "en": "I build backend services and REST APIs, integrate external systems, and work with databases to support reliable data flow and application functionality.",
+        "fa": "سرویس‌های بک‌اند و REST API می‌سازم، سیستم‌های خارجی را یکپارچه می‌کنم و با پایگاه‌های داده کار می‌کنم تا جریان داده و عملکرد برنامه قابل‌اعتماد باشد."
+      }
+    },
+    {
+      "title": {
+        "en": "Database Design & Integration",
+        "fa": "طراحی و یکپارچه‌سازی پایگاه داده"
+      },
+      "description": {
+        "en": "I work with PostgreSQL and Prisma to structure application data, define relationships, and integrate databases with backend services to support maintainable applications.",
+        "fa": "با PostgreSQL و Prisma داده‌های برنامه را ساختاردهی می‌کنم، روابط بین آن‌ها را تعریف می‌کنم و پایگاه داده را با سرویس‌های بک‌اند یکپارچه می‌کنم تا برنامه‌ها قابل نگهداری بمانند."
+      }
+    }
+  ],
+  "contactText": {
+    "en": "I design and code beautifully simple things and I love what I do. Just simple like that!",
+    "fa": "چیزهای ساده و زیبا طراحی و پیاده‌سازی می‌کنم و عاشق کارم هستم. به همین سادگی!"
+  }
+}

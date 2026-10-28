@@ -1,14 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import LogoK from "../../../../public/LogoK.png"
-import SocialLinks from "../SocialLinks";
+import SocialLinks, { Socials } from "../SocialLinks";
 import BackToTop from "./BackToTop";
 import { Locale, localePath } from "@/i18n/config";
 import { Dictionary } from "@/i18n/dictionaries";
 
 // ----------------------------------------------------------------------
 
-const Footer = ({ lang, dict }: { lang: Locale, dict: Dictionary }) => {
+type FooterProps = { lang: Locale, dict: Dictionary, name: string, hasWorks: boolean, socials: Socials }
+
+const Footer = ({ lang, dict, name, hasWorks, socials }: FooterProps) => {
     // fa-IR formats the year in the Persian calendar with Persian digits
     const year = new Intl.DateTimeFormat(lang === "fa" ? "fa-IR" : "en-US", { year: "numeric" }).format(new Date())
 
@@ -19,15 +21,15 @@ const Footer = ({ lang, dict }: { lang: Locale, dict: Dictionary }) => {
             <Image className="relative" src={LogoK} alt="" width={64} height={64}></Image>
             <nav className="relative flex gap-8 text-white/80 font-semibold">
                 <Link className="hover:text-white transition-colors" href={localePath(lang, "/#servicesID")}>{dict.nav.services}.</Link>
-                {/* <Link href={"/#worksID"}>Works.</Link> */}
+                {hasWorks && <Link className="hover:text-white transition-colors" href={localePath(lang, "/#worksID")}>{dict.nav.works}.</Link>}
                 <Link className="hover:text-white transition-colors" href={localePath(lang, "/#skillsID")}>{dict.nav.skills}.</Link>
                 <Link className="hover:text-white transition-colors" href={localePath(lang, "/#contactID")}>{dict.nav.contact}.</Link>
             </nav>
             <div className="relative">
-                <SocialLinks dark />
+                <SocialLinks links={socials} dark />
             </div>
             <div className="relative w-full max-w-5xl px-5 pt-6 border-t border-white/10 text-center text-sm text-white/50">
-                © {year} <span className="font-semibold text-white/80">{dict.nav.name}</span>. {dict.footer.rights}
+                © {year} <span className="font-semibold text-white/80">{name}</span>. {dict.footer.rights}
             </div>
         </footer>
         <BackToTop label={dict.footer.backToTop} />
